@@ -1,0 +1,374 @@
+#6 - Alquiler de vehículos
+
+	Tabla Cliente
+
+	INSERT INTO Cliente (DNI,NOMBREC,TARJETAC,DIRECCIONC,TELEFONOC) VALUES ('CLT0000001','Gustavo Lopez','2547-8541-6589-0','Torre Sinfonia #42 Ensanche Naco','809-475-2145');
+	INSERT INTO Cliente (DNI,NOMBREC,TARJETAC,DIRECCIONC,TELEFONOC) VALUES ('CLT0000002','Jorge Ramos','2547-8541-6589-5','Cesar Nicolas Penson esq. Maximo Gomez','809-248-3520');
+	INSERT INTO Cliente (DNI,NOMBREC,TARJETAC,DIRECCIONC,TELEFONOC) VALUES ('CLT0000003','Cristina Perez','1597-8541-6589-5','Calle 34 esq. Ortega y Gasset','829-159-8624');
+	INSERT INTO Cliente (DNI,NOMBREC,TARJETAC,DIRECCIONC,TELEFONOC) VALUES ('CLT0000004','Andrea Mendoza','2846-5173-8923-7','Correa y Cidron casi esq. Paseo de los Medicos','849-198-2525');
+	INSERT INTO Cliente (DNI,NOMBREC,TARJETAC,DIRECCIONC,TELEFONOC) VALUES ('CLT0000005','Adelia Ureña','2547-5421-7946-3','Calle Santiago casi esq. Maximo Gomez','809-489-1245');
+	INSERT INTO Cliente (DNI,NOMBREC,TARJETAC,DIRECCIONC,TELEFONOC) VALUES ('CLT0000006','Gloria Estoño','3698-1474-5478-0','Av. Mexico casi esq. Tiradentes','809-457-1259');
+	INSERT INTO Cliente (DNI,NOMBREC,TARJETAC,DIRECCIONC,TELEFONOC) VALUES ('CLT0000007','Alfredo Ramirez','8462-2547-9641-2','Calle F. Edificio 86. Apto 101 Los Rios','809-647-9128');
+	INSERT INTO Cliente (DNI,NOMBREC,TARJETAC,DIRECCIONC,TELEFONOC) VALUES ('CLT0000008','Jason Brigdes','7413-9467-1548-9','Paseo las palmas esq. Luis Perez Garcia','809-647-1489');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla Oficina
+
+	INSERT INTO Oficina (IDOF,DIRECCIONOF,CIUDADOF,TELEFONOOF) VALUES ('OF001','Av. Linclon esq. Kennedy','Santo Domingo','809-157-9432');
+	INSERT INTO Oficina (IDOF,DIRECCIONOF,CIUDADOF,TELEFONOOF) VALUES ('OF002','Av. Ortega y Gasset esq. calle 28','Santo Domingo','809-671-1349');
+	INSERT INTO Oficina (IDOF,DIRECCIONOF,CIUDADOF,TELEFONOOF) VALUES ('OF003','Av. Nicolas de Ovando esq. Ramon caceres','Santo Domingo','809-286-5791');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla Vehiculo
+
+	INSERT INTO Vehiculo (MATRICULA,GRUPO,MARCA,PLAZAS,PUERTAS,MALETERO,EDADMINIMA,IDOF,MODELO) VALUES ('L879456','A','Nissan','2','4','3000','19','OF001','Forntier');
+	INSERT INTO Vehiculo (MATRICULA,GRUPO,MARCA,PLAZAS,PUERTAS,MALETERO,EDADMINIMA,IDOF,MODELO) VALUES ('T521498','B','Toyota','6','4','2500','20','OF001','Hilux');
+	INSERT INTO Vehiculo (MATRICULA,GRUPO,MARCA,PLAZAS,PUERTAS,MALETERO,EDADMINIMA,IDOF,MODELO) VALUES ('T943715','C','Toyota','4','4','1500','20','OF001','Corolla');
+	INSERT INTO Vehiculo (MATRICULA,GRUPO,MARCA,PLAZAS,PUERTAS,MALETERO,EDADMINIMA,IDOF,MODELO) VALUES ('H172839','G','Hyundai','2','4','6000','23','OF002','Santa Fe');
+	INSERT INTO Vehiculo (MATRICULA,GRUPO,MARCA,PLAZAS,PUERTAS,MALETERO,EDADMINIMA,IDOF,MODELO) VALUES ('S581460','A','Toyota','5','4','2300','19','OF002','4Runner');
+	INSERT INTO Vehiculo (MATRICULA,GRUPO,MARCA,PLAZAS,PUERTAS,MALETERO,EDADMINIMA,IDOF,MODELO) VALUES ('M846295','B','Mitsubishi','2','4','3000','19','OF003','Montero');
+	INSERT INTO Vehiculo (MATRICULA,GRUPO,MARCA,PLAZAS,PUERTAS,MALETERO,EDADMINIMA,IDOF,MODELO) VALUES ('K521498','D','Kia','4','2','2500','22','OF003','Sportage');
+	INSERT INTO Vehiculo (MATRICULA,GRUPO,MARCA,PLAZAS,PUERTAS,MALETERO,EDADMINIMA,IDOF,MODELO) VALUES ('K521794','D','Kia','4','2','2500','22','OF003','Sportage');
+	INSERT INTO Vehiculo (MATRICULA,GRUPO,MARCA,PLAZAS,PUERTAS,MALETERO,EDADMINIMA,IDOF,MODELO) VALUES ('L684265','G','Nissan','6','4','8000','25','OF003','Sentra');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla Alquila
+
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000002','M846295','3','Medio','9000');
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000002','K521498','2','Parcial','2000');
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000001','L879456','2','Medio','3000');
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000001','L684265','1','Completo','4000');
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000003','S581460','5','Parcial','6000');
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000003','L684265','3','Completo','9500');
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000004','H172839','1','Medio','1500');
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000004','T521498','4','Completo','8000');
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000005','L684265','3','Parcial','1500');
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000005','K521498','6','Medio','9600');
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000006','H172839','1','Medio','1500');
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000006','T521498','4','Completo','8000');
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000007','S581460','4','Parcial','4800');
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000007','L684265','2','Completo','7000');
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000008','H172839','2','Medio','3000');
+	INSERT INTO Alquila (DNI,MATRICULA,DIAS,SEGURO,PRECIO) values ('CLT0000008','T521498','4','Completo','8000');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#7 - Zoologico
+
+	Tabla Especie
+
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('TIGRE','Panthera tigris','tigre.jpg','Animal felino de pelo naranja y manchas negras');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('ELEFANTE','Loxodonta africana','elefante.jpg','Mamifero de piel gris con cuernos y nariz larga');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('CONEJO','Oryctolagus cuniculus','conejo.jpg','Animal pequeño de pelo blanco y ojos rojos que come zanahorias');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('COBRA ','Ophiophagus hannah ','cobra.jpg','Reptil de cuerpo largo que puede envenenar');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('GORILA ','Gorilla gorilla ','gorila.jpg','Mamifero de pelo negro que come guineos');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('TORTUGA MARINA ','Caretta caretta ','tortuga marina.jpg','Animal de piel verde con caparazon');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('LEON ','Panthera leo ','leon.jpg','Felino de pelo amarillo sin manchas que considerado el rey de la selva');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('RINOERONTE ','Ceratotherium simum ','rinoeronte.jpg','Mamifero de piel gris con un gran cuerno en el frente');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('CANGURO ','Macropus rufus ','canguro.jpg','Marsupial que se mueve saltando y que tiene una bolsa donde cubre su crianza');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('LEOPARDO','Pantera pardus','leopardo.jpg','Animal felino de pelo amarillo y manchas negras');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('CHIMPANCE','Pan troglodytes ','chimpance.jpg','Mamifero de pelo negro con orejas grandes');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('OSO PANDA ','Ailuropoda melanoleuca','oso panda.jpg','Mamifero de Pelo blanco y negro que come bambues');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('CASTOR','Castor canadensis','castor.jpg','Animal pequeño de cola plana y dientes resaltantes que usa para comer madera');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('HIPOPÓTAMO','Hippopotamus amphibiu ','hipopótamo.jpg','Mamifero de gran masa corporal de piel gris y orejas pequeñas');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('COCODRILO','Crocodylus niloticus','cocodrilo.jpg','Reptil de piel verde que vive en los pantanos');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('DELFIN ','Tursiops truncatus','delfin.jpg','Mamifero marino con una aleta sobresaliente por la espalda y nariz medio punteaguda');
+	INSERT INTO Especie (NOMBRECOMUN,NOMBRECNTFC,FOTO,DESCRIPCION) VALUES ('PUMA ','Felis concolor','puma.jpg','Animal felino que se ve como un gato pero mas grande. Hay con pelo amarillo y con pelo negro.');
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla Itinerario
+
+	INSERT INTO Itinerario (CODIGOIT,DURACION,VISITANTES,LONGITUD) VALUES ('ITN0000001','30','50','1');
+	INSERT INTO Itinerario (CODIGOIT,DURACION,VISITANTES,LONGITUD) VALUES ('ITN0000002','45','30','2');
+	INSERT INTO Itinerario (CODIGOIT,DURACION,VISITANTES,LONGITUD) VALUES ('ITN0000003','60','45','3');
+	INSERT INTO Itinerario (CODIGOIT,DURACION,VISITANTES,LONGITUD) VALUES ('ITN0000004','75','36','4');
+	INSERT INTO Itinerario (CODIGOIT,DURACION,VISITANTES,LONGITUD) VALUES ('ITN0000005','90','34','5');
+	INSERT INTO Itinerario (CODIGOIT,DURACION,VISITANTES,LONGITUD) VALUES ('ITN0000006','105','31','3');
+	INSERT INTO Itinerario (CODIGOIT,DURACION,VISITANTES,LONGITUD) VALUES ('ITN0000007','120','29','2');
+	INSERT INTO Itinerario (CODIGOIT,DURACION,VISITANTES,LONGITUD) VALUES ('ITN0000008','135','26','4');
+	INSERT INTO Itinerario (CODIGOIT,DURACION,VISITANTES,LONGITUD) VALUES ('ITN0000009','150','24','1');
+	INSERT INTO Itinerario (CODIGOIT,DURACION,VISITANTES,LONGITUD) VALUES ('ITN0000010','165','21','2');
+	INSERT INTO Itinerario (CODIGOIT,DURACION,VISITANTES,LONGITUD) VALUES ('ITN0000011','180','19','3');
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla Habitat
+
+	INSERT INTO Habitat (NOMBREH,CLIMA,VEGETACION) VALUES ('REPTILES','Calido','Abundante');
+	INSERT INTO Habitat (NOMBREH,CLIMA,VEGETACION) VALUES ('MAMIFEROS TERRESTRES','Calido','Abundante');
+	INSERT INTO Habitat (NOMBREH,CLIMA,VEGETACION) VALUES ('MAMIFEROS MARINOS','Templado','Pobre');
+	INSERT INTO Habitat (NOMBREH,CLIMA,VEGETACION) VALUES ('MARSUPIALES','Calido','Abundante');
+	INSERT INTO Habitat (NOMBREH,CLIMA,VEGETACION) VALUES ('FELINOS','Calido','Abundante');
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla ViveEn
+
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('FELINOS','TIGRE','2');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('MAMIFEROS TERRESTRES','ELEFANTE','1');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('MAMIFEROS TERRESTRES','CONEJO','2');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('REPTILES','COBRA ','3');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('MAMIFEROS TERRESTRES','GORILA ','3');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('MAMIFEROS MARINOS','TORTUGA MARINA ','4');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('MAMIFEROS TERRESTRES','LEON ','3');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('MAMIFEROS TERRESTRES','RINOERONTE ','2');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('MARSUPIALES','CANGURO ','4');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('FELINOS','LEOPARDO','5');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('MAMIFEROS TERRESTRES','CHIMPANCE','5');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('MAMIFEROS TERRESTRES','OSO PANDA ','8');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('MAMIFEROS TERRESTRES','CASTOR','6');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('MAMIFEROS TERRESTRES','HIPOPÓTAMO','6');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('REPTILES','COCODRILO','7');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('MAMIFEROS MARINOS','DELFIN ','4');
+	INSERT INTO ViveEn (NOMBREH,NOMBRECOMUN,INDICE) VALUES ('FELINOS','PUMA ','7');
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla Recorrer. Hice esta tabla extra al notar un detalle en el diagrama.
+	
+	CREATE TABLE Recorrer 
+   	(	
+		nombreHabitat VARCHAR2(40) NOT NULL, 
+		codigoItinerario VARCHAR2(10) NOT NULL,
+
+		CONSTRAINT Recorrer_PK PRIMARY KEY(nombreHabitat,codigoItinerario),
+		CONSTRAINT Habitat_FK FOREIGN KEY(nombreHabitat) REFERENCES Habitat(nombreH),
+		CONSTRAINT Itinerario_FK FOREIGN KEY(codigoItinerario) REFERENCES Itinerario(codigoIT)
+   	);
+
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('FELINOS','ITN0000003');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('FELINOS','ITN0000005');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('FELINOS','ITN0000006');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('FELINOS','ITN0000007');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('FELINOS','ITN0000008');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('FELINOS','ITN0000011');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MAMIFEROS MARINOS','ITN0000001');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MAMIFEROS MARINOS','ITN0000003');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MAMIFEROS MARINOS','ITN0000004');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MAMIFEROS MARINOS','ITN0000005');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MAMIFEROS MARINOS','ITN0000006');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MAMIFEROS MARINOS','ITN0000008');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MAMIFEROS MARINOS','ITN0000011');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MAMIFEROS TERRESTRES','ITN0000002');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MAMIFEROS TERRESTRES','ITN0000003');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MAMIFEROS TERRESTRES','ITN0000004');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MAMIFEROS TERRESTRES','ITN0000005');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MAMIFEROS TERRESTRES','ITN0000007');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MAMIFEROS TERRESTRES','ITN0000008');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MAMIFEROS TERRESTRES','ITN0000009');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MARSUPIALES','ITN0000002');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MARSUPIALES','ITN0000004');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MARSUPIALES','ITN0000005');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MARSUPIALES','ITN0000006');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MARSUPIALES','ITN0000008');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MARSUPIALES','ITN0000010');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('MARSUPIALES','ITN0000011');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('REPTILES','ITN0000001');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('REPTILES','ITN0000004');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('REPTILES','ITN0000005');
+	INSERT INTO Recorrer (NOMBREHABITAT,CODIGOITINERARIO) VALUES ('REPTILES','ITN0000010');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#8 - Pacientes
+
+	Tabla Atiende
+	
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1575','PC587414','Dismenorrea','Anticonceptivos','01/07/2003');
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1576','PC587413','Leucemia','Transplante','04/09/2006');
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1577','PC587412','Autismo','Psicoanalisis','10/25/2008');
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1578','PC587415','Albinismo','Anteojos','01/25/2006');
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1579','PC587416','Anorexia','Realimentacion','06/12/2005');
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1580','PC587417','Caries','Insercion','10/26/2002');
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1581','PC587418','Bronquiectasias','Antibioticos','09/13/2008');
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1582','PC587419','Taquicardia','RCP','09/12/2004');
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1583','PC587420','Dermatitis','Corticosteroides','03/13/2000');
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1584','PC587421','Laringitis','Aspirina','02/07/2008');
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1585','PC587422','Esofagitis','Funduplicatura','12/21/2009');
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1586','PC587423','Diabetes','Insulina','10/22/2008');
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1587','PC587424','Cancer de pulmon','Segmentectomia','04/15/2009');
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1588','PC587425','Artritis','Analgesicos','01/29/2004');
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1589','PC587426','Cirrosis','Antibioticos','06/14/2009');
+	Insert into Atiende (CODIGODC,SSPC,SINTOMA,TRATAMIENTO,FECHA) VALUES ('DC1590','PC587427','Artrosis','Ejercicios','05/13/2002');
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla Doctor
+
+	Insert Into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1575','Estefani','Ginecologia');
+	Insert into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1576','Alexandra','Cirujia');
+	Insert into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1577','Cyntia','Pediatria');
+	Insert into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1578','Karen','Oftalmologia');
+	Insert into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1579','Karina','Psiquiatria');
+	Insert into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1580','Isamar','Odontologia');
+	Insert into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1581','Rubi','Neumologia');
+	Insert into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1582','Antonio','Cardiologia');
+	Insert into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1583','Gabriel','Dermatologia');
+	Insert into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1584','Jesus','Otorinolarringologia');
+	Insert into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1585','Alejandro','Gastroenterologia');
+	Insert into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1586','Guillermo','Endocrinologia');
+	Insert into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1587','Raymond','Oncologo');
+	Insert into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1588','Raul','Ortopedia');
+	Insert into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1589','Domingo','Urologia');
+	Insert into Doctor (CODIGODC,NOMBREDC,ESPECIALIDAD) values ('DC1590','Ernesto','Reumatologia');
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla Paciente
+
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587412','Alberto','21','UD238','09/23/2005');
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587413','Ramon','30','UD239','04/11/2003');
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587414','Estela','37','UD240','06/25/2000');
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587415','Maria','23','UD241','06/07/2004');
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587416','Andrea','30','UD242','12/10/2005');
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587417','Eduardo','60','UD243','06/01/2003');
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587418','Raynier','67','UD244','12/07/2006');
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587419','Osvaldo','22','UD245','10/26/2007');
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587420','Esteban','35','UD246','07/08/2007');
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587421','Gloria','23','UD247','02/13/2006');
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587422','Margarita','48','UD248','04/07/2008');
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587423','Susana','69','UD249','01/16/2003');
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587424','Roberto','42','UD250','08/16/2006');
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587425','Daniel','68','UD251','05/21/2006');
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587426','Lorenzo','33','UD252','04/11/2004');
+	Insert Into Paciente (SSPC,NOMBREPC,EDAD,IDU,FECHA) values ('PC587427','Cristian','51','UD253','08/20/2003');
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla Unidad
+
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD238','Ginecologia','1','DC1575');
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD239','Cirujia','3','DC1576');
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD240','Pediatria','3','DC1577');
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD241','Oftalmologia','3','DC1578');
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD242','Psiquiatria','3','DC1579');
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD243','Odontologia','3','DC1580');
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD244','Neumologia','3','DC1581');
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD245','Cardiologia','1','DC1582');
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD246','Dermatologia','1','DC1583');
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD247','Otorinolarringologia','1','DC1584');
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD248','Gastroenterologia','3','DC1585');
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD249','Endocrinologia','3','DC1586');
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD250','Oncologo','3','DC1587');
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD251','Ortopedia','1','DC1588');
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD252','Urologia','2','DC1589');
+	Insert Into Unidad (IDU,NOMBRE,PLANTA,CODIGODC) values ('UD253','Reumatologia','3','DC1590');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#9 - Inmoviliaria
+
+	Tabla Contrato
+
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM01','Asenfi','3837');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM02','Carmen Morfa','5349');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM03','Cofinsa','4371');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM04','BuscasaRD','6349');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM05','Esther','3792');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM06','Hogares Real Estate','2560');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM07','Hogares Real Estate','6806');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM08','Grupo Altabrava','5552');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM09','Asenfi','2307');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM10','Carmen Morfa','3496');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM01','Cofinsa','5474');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM06','BuscasaRD','4703');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM09','Esther','4325');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM01','FullHomeRd','3455');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM02','Hogares Real Estate','7526');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM03','Grupo Altabrava','4325');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM04','Asenfi','3598');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM05','Carmen Morfa','3858');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM06','Cofinsa','7462');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM07','BuscasaRD','5501');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM08','Esther','7543');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM09','FullHomeRd','4814');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM10','Hogares Real Estate','7426');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM01','Grupo Altabrava','6730');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM06','Asenfi','7633');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM09','Carmen Morfa','2805');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM01','Carmen Morfa','5013');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM02','BuscasaRD','6355');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM03','Esther','5338');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM04','FullHomeRd','6803');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM05','Hogares Real Estate','3684');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM06','Grupo Altabrava','2929');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM07','Asenfi','3661');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM08','Carmen Morfa','5520');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM09','Cofinsa','6429');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM10','BuscasaRD','5509');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM01','Esther','6826');
+	Insert Into Contrato (CODIGOP,NOMBREE,IMPORTE) values ('PRM06','FullHomeRd','5786');
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla Empresa
+
+	Insert Into Empresa (NOMBREE,TIPO,DIRECCION,TELEFONO,FAX,EMAIL) values ('Asenfi','Inmoviliaria','Sector: Gazcue, Avenida Maximo Gomez #29 Plaza gazcue, segundo piso, local 204 ','809-968-9333','809-968-9333','asenfi2003@yahoo.es');
+	Insert Into Empresa (NOMBREE,TIPO,DIRECCION,TELEFONO,FAX,EMAIL) values ('Carmen Morfa','Inmoviliaria','Isabel Santana 25, Los Peralejos, Santo Domingo Oeste.','809-712-1434','809-412-1434','inmobiliaria_gestion@hotmail.com');
+	Insert Into Empresa (NOMBREE,TIPO,DIRECCION,TELEFONO,FAX,EMAIL) values ('Cofinsa','Inmoviliaria','Calle paseo del arrollo esquina senderos, colina de los rios.','809-926-4490','829-749-1671','casado01@live.com');
+	Insert Into Empresa (NOMBREE,TIPO,DIRECCION,TELEFONO,FAX,EMAIL) values ('BuscasaRD','Inmoviliaria','Avenida los Próceres esq. Euclides Morillo, Local B23, segundo piso.','809-227-6903','829-274-8216','Buscasard@gmail.com');
+	Insert Into Empresa (NOMBREE,TIPO,DIRECCION,TELEFONO,FAX,EMAIL) values ('Esther','Inmoviliaria','Pablo Casals No. 13, Ens. Serralles','809-563-4337','809-856-4826','inmobiliaria@macrd.com');
+	Insert Into Empresa (NOMBREE,TIPO,DIRECCION,TELEFONO,FAX,EMAIL) values ('FullHomeRd','Inmoviliaria','Av. 27 de Febrero, 302A local 203, Bella Vista, Santo Domingo, D.N.','829-998-1009','829-340-2162','fullhomeinmobiliaria@gmail.com');
+	Insert Into Empresa (NOMBREE,TIPO,DIRECCION,TELEFONO,FAX,EMAIL) values ('Hogares Real Estate','Inmoviliaria','Avenida Abraham Lincoln #847, Edificio Profesional Lincoln suite 3C , Piantini, Distrito Nacional','829-998-0250','809-759-7623','hogaresrealestate@gmail.com');
+	Insert Into Empresa (NOMBREE,TIPO,DIRECCION,TELEFONO,FAX,EMAIL) values ('Grupo Altabrava','Inmoviliaria','Bella Vista','809-508-5753','809-729-7530','grupoaltabrava@gmail.com');
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla Promocion
+
+	Insert Into Promocion (CODIGOP,NOMBRE,POBLACION,PLANO) values ('PRM01','Promocion 1','Gualey','p1.jpg');
+	Insert Into Promocion (CODIGOP,NOMBRE,POBLACION,PLANO) values ('PRM02','Promocion 2','Los matoralles','p2.jpg');
+	Insert Into Promocion (CODIGOP,NOMBRE,POBLACION,PLANO) values ('PRM03','Promocion 3','La Caleta','p3.jpg');
+	Insert Into Promocion (CODIGOP,NOMBRE,POBLACION,PLANO) values ('PRM04','Promocion 4','Las Caritas','p4.jpg');
+	Insert Into Promocion (CODIGOP,NOMBRE,POBLACION,PLANO) values ('PRM05','Promocion 5','Ciudad Satelite','p5.jpg');
+	Insert Into Promocion (CODIGOP,NOMBRE,POBLACION,PLANO) values ('PRM06','Promocion 6','Rancho Arriba','p6.jpg');
+	Insert Into Promocion (CODIGOP,NOMBRE,POBLACION,PLANO) values ('PRM07','Promocion 7','Las Maticas','p7.jpg');
+	Insert Into Promocion (CODIGOP,NOMBRE,POBLACION,PLANO) values ('PRM08','Promocion 8','Los Guarucos','p8.jpg');
+	Insert Into Promocion (CODIGOP,NOMBRE,POBLACION,PLANO) values ('PRM09','Promocion 9','Ciudad Bosch','p9.jpg');
+	Insert Into Promocion (CODIGOP,NOMBRE,POBLACION,PLANO) values ('PRM10','Promocion 10','Villa Mella','p10.jpg');
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla Vivienda
+
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD001','211','5','2','plano1.jpg','0','1','1','1','PRM01');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD002','457','4','3','plano2.jpg','2','1','0','0','PRM02');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD003','253','1','2','plano3.jpg','2','0','0','0','PRM03');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD004','494','1','2','plano4.jpg','1','2','1','0','PRM04');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD005','212','5','1','plano5.jpg','1','0','1','0','PRM05');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD006','474','5','2','plano6.jpg','2','2','0','0','PRM06');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD007','345','4','2','plano7.jpg','2','2','0','1','PRM07');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD008','223','5','3','plano8.jpg','1','1','1','0','PRM08');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD009','474','3','3','plano9.jpg','1','0','1','1','PRM09');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD010','394','1','3','plano10.jpg','1','2','0','1','PRM10');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD011','296','2','2','plano11.jpg','2','1','0','0','PRM01');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD012','484','3','3','plano12.jpg','1','0','1','0','PRM02');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD013','457','1','2','plano13.jpg','2','0','0','0','PRM01');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD014','305','5','2','plano14.jpg','2','2','1','1','PRM02');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD015','490','2','2','plano15.jpg','1','1','0','1','PRM03');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD016','435','4','1','plano16.jpg','1','1','1','1','PRM04');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD017','343','5','3','plano17.jpg','1','0','0','0','PRM05');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD018','334','5','2','plano18.jpg','1','0','1','0','PRM06');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD019','377','4','2','plano19.jpg','1','1','0','0','PRM07');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD020','361','4','2','plano20.jpg','1','0','0','1','PRM08');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD021','337','2','2','plano21.jpg','2','2','1','0','PRM09');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD022','408','2','1','plano22.jpg','1','0','1','1','PRM10');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD023','252','1','2','plano23.jpg','2','2','0','1','PRM01');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD024','397','3','2','plano24.jpg','1','1','0','1','PRM02');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD025','492','5','1','plano25.jpg','1','0','1','0','PRM01');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD026','361','4','2','plano26.jpg','2','0','0','1','PRM02');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD027','239','4','1','plano27.jpg','1','1','0','1','PRM03');
+	Insert Into Vivienda (IDV,SUPERFICIE,HABITACIONES,BANOS,PLANO,TERRAZA,JARDIN,PISCINA,GARAJE,CODIGOP) values ('VD028','213','3','2','plano28.jpg','2','1','0','1','PRM04');
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#10 - Agencia de Publicidad
+	
+	Tabla Cliente
+
+	Insert Into Cliente (NOMBREC,DIRECCION,TELEFONO,EMAIL) values ('Vigoth Atgur','2023 Park Place Waxhaw, NC 28173','202-555-0143','flynt@hotmail.com');
+	Insert Into Cliente (NOMBREC,DIRECCION,TELEFONO,EMAIL) values ('Cevelt','7875 Fulton Street Albany, NY 12203','202-555-0174','piatkowski@hotmail.com');
+	Insert Into Cliente (NOMBREC,DIRECCION,TELEFONO,EMAIL) values ('Rivatha Izic Nothar','5921 Bank Street Elkhart, IN 46514','202-555-0197','hausladen@hotmail.com');
+	Insert Into Cliente (NOMBREC,DIRECCION,TELEFONO,EMAIL) values ('Olivia','8937 College Avenue Ossining, NY 10562','202-555-0116','ercole@hotmail.com');
+	Insert Into Cliente (NOMBREC,DIRECCION,TELEFONO,EMAIL) values ('Ada Anfarc','8485 Maple Lane Tewksbury, MA 01876','202-555-0131','ohlendorf@hotmail.com');
+	Insert Into Cliente (NOMBREC,DIRECCION,TELEFONO,EMAIL) values ('Seth Fildon','442 Church Street South Manchester, NH 03102','202-555-0129','wilbert@hotmail.com');
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla Web
+
+	Insert Into Web (URL,NOMBRE,TEMA) values ('workingtc.com','technologyinformation','TIC');
+	Insert Into Web (URL,NOMBRE,TEMA) values ('medicalweb.com','uMedicine','Medicina');
+	Insert Into Web (URL,NOMBRE,TEMA) values ('thesports.net','theSports','Sports');
+	Insert Into Web (URL,NOMBRE,TEMA) values ('biog.com','bioloGeo','Biologia');
+	Insert Into Web (URL,NOMBRE,TEMA) values ('onweapons.org','onweapons','Armas');
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla Anuncio
+	
+	Insert Into Anuncio (CODIGOA,TIPO,TITULAR,CATEGORIA,PRECIO,NOMBREC) values ('ANC01','Banner','Mueren infantes y no hay medicina','Medicina','249','Vigoth Atgur');
+	Insert Into Anuncio (CODIGOA,TIPO,TITULAR,CATEGORIA,PRECIO,NOMBREC) values ('ANC02','Pop Up','Más gobiernos de todo el mundo se están moviendo a aceptar la medicina natural','Medicina','214','Cevelt');
+	Insert Into Anuncio (CODIGOA,TIPO,TITULAR,CATEGORIA,PRECIO,NOMBREC) values ('ANC03','Redes sociales','Avanza Iniciativa Medicina precisión del presidente','Medicina','202','Rivatha Izic Nothar');
+	Insert Into Anuncio (CODIGOA,TIPO,TITULAR,CATEGORIA,PRECIO,NOMBREC) values ('ANC04','Correos electrónicos','La filosofía de la medicina','Medicina','280','Olivia');
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Tabla Aparece
+
+	Insert Into Aparece (URL,NOMBRE,TEMA) values ('workingtc.com','technologyinformation','TIC');
+	Insert Into Aparece (URL,NOMBRE,TEMA) values ('medicalweb.com','uMedicine','Medicina');
+	Insert Into Aparece (URL,NOMBRE,TEMA) values ('thesports.net','theSports','Sports');
+	Insert Into Aparece (URL,NOMBRE,TEMA) values ('biog.com','bioloGeo','Biologia');
+	Insert Into Aparece (URL,NOMBRE,TEMA) values ('onweapons.org','onweapons','Armas');
